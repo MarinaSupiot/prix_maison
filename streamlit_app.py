@@ -1,25 +1,7 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
-import datetime
-import seaborn as sns
-import numpy as np
-
-import math
-
-from scipy.stats import pearsonr
-from sklearn.linear_model import LinearRegression
-
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import explained_variance_score
-
-from sklearn import tree, linear_model
-from sklearn.metrics import r2_score
-from sklearn.model_selection import learning_curve
-from sklearn.metrics import *
 from sklearn.pipeline import make_pipeline
 from sklearn.model_selection import train_test_split
-import numpy as np
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import Ridge
 from PIL import Image
@@ -73,8 +55,8 @@ df=user_input()
 
 #st.subheader('On veut calculer le prix pour cette maison')
 #st.write(df)
-X = pd.read_csv("/home/marina/Desktop/prix_maison/df_sans_header.csv")
-y = pd.read_csv("/home/marina/Desktop/prix_maison/tafget_sans_header.csv")
+X = pd.read_csv("/home/marina/Desktop/prix_maison/app/df_sans_header.csv")
+y = pd.read_csv("/home/marina/Desktop/prix_maison/app/tafget_sans_header.csv")
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)
 model1 = make_pipeline(StandardScaler(), Ridge())
@@ -93,7 +75,7 @@ prediction = model1.predict(df)
 prix = round(prediction[0][0],2)
 st.write("# Le prix de votre maison est:", prix, "$")
 
-image = Image.open('/home/marina/Desktop/prix_maison/maison.jpg')
+image = Image.open('/home/marina/Desktop/prix_maison/app/maison.jpg')
 
 st.image(image)
 st.write("## Bonne chance!") 
