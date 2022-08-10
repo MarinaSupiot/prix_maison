@@ -18,7 +18,7 @@ def user_input():
     grade=st.sidebar.slider('Niveau de qualité de la construction ',1, 13, 7)
     sqft_above=st.sidebar.slider("L'espace intérieur du logement qui est au-dessus du niveau du sol",290,9410,1560)
     sqft_living15=st.sidebar.slider("La superficie de l'espace de vie intérieur du logement pour les 15 voisins les plus proches" ,399,6210, 1490)
-    bathrooms=st.sidebar.slider("Nombre de salles de bains, où 0,5 correspond à une chambre avec toilettes mais sans douche",2,8,3)
+    bathrooms=st.sidebar.slider("Nombre de salles de bains, où 0,5 correspond à une chambre avec toilettes mais sans douche",2.0,8.0,3.0,step = 0.5)
     view=st.sidebar.slider("Vue, un indice de 0 à 4 de la qualité de la vue de la propriété",0,4,0)
     sqft_basement=st.sidebar.slider("La superficie en pieds carrés de l'espace intérieur du logement qui est sous le niveau du sol",0, 3260, 0)
     bedrooms=st.sidebar.slider("Nombre de chambres",1,11,3)
