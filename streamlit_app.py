@@ -55,8 +55,8 @@ df=user_input()
 
 #st.subheader('On veut calculer le prix pour cette maison')
 #st.write(df)
-X = pd.read_csv("/home/marina/Desktop/prix_maison/app/df_sans_header.csv")
-y = pd.read_csv("/home/marina/Desktop/prix_maison/app/tafget_sans_header.csv")
+X = pd.read_csv("app/df_sans_header.csv")
+y = pd.read_csv("app/tafget_sans_header.csv")
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)
 model1 = make_pipeline(StandardScaler(), Ridge())
