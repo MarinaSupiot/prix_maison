@@ -55,8 +55,8 @@ df=user_input()
 
 #st.subheader('On veut calculer le prix pour cette maison')
 #st.write(df)
-X = pd.read_csv("app/df_sans_header.csv")
-y = pd.read_csv("app/tafget_sans_header.csv")
+X = pd.read_csv("df_sans_header.csv")
+y = pd.read_csv("tafget_sans_header.csv")
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)
 model1 = make_pipeline(StandardScaler(), Ridge())
@@ -74,7 +74,7 @@ prediction = model1.predict(df)
 prix = round(prediction[0][0],2)
 st.write("# Le prix de votre maison est:", prix, "$")
 
-image = Image.open('/home/marina/Desktop/prix_maison/app/maison.jpg')
+image = Image.open('maison.jpg)
 
 st.image(image)
 st.write("## Bonne chance!")
