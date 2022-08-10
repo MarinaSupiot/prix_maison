@@ -68,7 +68,6 @@ prediction = model1.predict(df)
        #'view', 'sqft_basement', 'bedrooms', 'lat', 'waterfront', 'house_age',
        #'zipcode_98004', 'zipcode_98039', 'zipcode_98040']
 
-
 #st.info('''
 ## Le prix de votre maison est:
 #''')
@@ -78,6 +77,6 @@ st.write("# Le prix de votre maison est:", prix, "$")
 image = Image.open('/home/marina/Desktop/prix_maison/app/maison.jpg')
 
 st.image(image)
-st.write("## Bonne chance!") 
+st.write("## Bonne chance!")
 
 
