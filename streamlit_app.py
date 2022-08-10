@@ -74,7 +74,7 @@ prediction = model1.predict(df)
 prix = round(prediction[0][0],2)
 st.write("# Le prix de votre maison est:", prix, "$")
 
-image = Image.open('maison.jpg)
+image = Image.open('maison.jpg')
 
 st.image(image)
 st.write("## Bonne chance!")
